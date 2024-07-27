@@ -1,8 +1,8 @@
 <?php 
 
-namespace tsi\atividade_3e4\controller\api;
+namespace Tsi\Atividade3e4\controller\api;
 
-use tsi\atividade_3e4\model\Model;
+use Tsi\Atividade3e4\model\Model;
 
 abstract class Controller{
 

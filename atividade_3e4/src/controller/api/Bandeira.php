@@ -1,8 +1,8 @@
 <?php
 
-namespace tsi\atividade_3e4\controller\api;
+namespace Tsi\Atividade3e4\controller\api;
 
-use tsi\atividade_3e4\model\Bandeira as ModelBandeira;
+use Tsi\Atividade3e4\model\Bandeira as ModelBandeira;
 use Exception;
 
 class Bandeira extends Controller
@@ -43,7 +43,7 @@ class Bandeira extends Controller
 		try {
 			$this->validateBandeiraRequest();
 
-			$this->model = new Bandeira(
+			$this->model = new ModelBandeira(
 				$_POST['nome'],
         $_POST['imagem']
 			);
@@ -74,7 +74,7 @@ class Bandeira extends Controller
 
 			$this->validateBandeiraRequest();
 
-			$this->model = new Bandeira(
+			$this->model = new ModelBandeira(
 				$_POST['nome'],
         $_POST['imagem']
 			);

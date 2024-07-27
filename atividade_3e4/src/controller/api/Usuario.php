@@ -1,8 +1,8 @@
 <?php
 
-namespace tsi\atividade_3e4\controller\api;
+namespace Tsi\Atividade3e4\controller\api;
 
-use tsi\atividade_3e4\model\Usuario as ModelUsuario;
+use Tsi\Atividade3e4\model\Usuario as ModelUsuario;
 use Exception;
 
 class Usuario extends Controller
@@ -43,7 +43,7 @@ class Usuario extends Controller
 		try {
 			$this->validateUsuarioRequest();
 
-			$this->model = new Usuario(
+			$this->model = new ModelUsuario(
 				$_POST['nome'],
         $_POST['email'],
         $_POST['cpf'],
@@ -77,7 +77,7 @@ class Usuario extends Controller
 
 			$this->validateUsuarioRequest();
 
-			$this->model = new Usuario(
+			$this->model = new ModelUsuario(
 				$_POST['nome'],
 				$_POST['email'],
 				$_POST['cpf'],

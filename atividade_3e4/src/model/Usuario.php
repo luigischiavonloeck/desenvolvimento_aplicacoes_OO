@@ -1,9 +1,9 @@
 <?php
 
-namespace tsi\atividade_3e4\model;
+namespace Tsi\Atividade3e4\model;
 
 use Exception;
-use tsi\atividade_3e4\interfaces\iDAO;
+use Tsi\Atividade3e4\interfaces\iDAO;
 
 class Usuario extends Model implements iDAO
 {
@@ -94,6 +94,10 @@ class Usuario extends Model implements iDAO
     {
         try {
             $this->values[':id'] = $this->id;
+            error_log("=======================================================================================");
+            error_log("ID: " . $this->id);
+            error_log(print_r($this->values, true));
+            error_log("=======================================================================================");
             $sql = "UPDATE $this->table SET $this->updated
                   WHERE $this->primary = :id";
             $prepStmt = $this->conn->prepare($sql);

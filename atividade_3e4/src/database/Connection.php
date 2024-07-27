@@ -1,8 +1,8 @@
 <?php
 
-namespace tsi\atividade_3e4\database;
+namespace Tsi\Atividade3e4\database;
 
-use tsi\atividade_3e4\controller\App;
+use Tsi\Atividade3e4\controller\App;
 use Exception;
 use PDO;
 use stdClass;

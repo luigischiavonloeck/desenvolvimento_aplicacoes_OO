@@ -1,7 +1,7 @@
 <?php 
-namespace tsi\atividade_3e4\controller;
+namespace Tsi\Atividade3e4\controller;
 
-use tsi\atividade_3e4\controller\api\Controller as ApiController;
+use Tsi\Atividade3e4\controller\api\Controller as ApiController;
 // use tsi\atividade_3e4\controller\web\Controller as WebController;
 
 class Route
@@ -10,7 +10,12 @@ class Route
 	public static function resolve(Array $routes)
 	{
 
-		$url_path = trim($_SERVER['REQUEST_URI'], '/');
+		$url_path = trim(parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH), '/');
+  	parse_str(parse_url($_SERVER['REQUEST_URI'], PHP_URL_QUERY), $query_params);
+
+  	if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+  	    $_POST = array_merge($_POST, $query_params);
+  	}
 		self::$query = explode('/', $url_path);
 
 		error_log("Query array: \n".print_r(self::$query, TRUE));

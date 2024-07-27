@@ -1,6 +1,6 @@
 <?php
 
-use tsi\atividade_3e4\controller\api\{Posto, Bandeira, Usuario};
+use Tsi\Atividade3e4\controller\api\{Posto, Bandeira, Usuario};
 //use tsi\atividade_3e4\controller\web\Posto as WebPosto;
 
 $routes = [

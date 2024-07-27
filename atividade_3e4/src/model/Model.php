@@ -1,8 +1,8 @@
 <?php
 
-namespace tsi\atividade_3e4\model;
+namespace Tsi\Atividade3e4\model;
 
-use tsi\atividade_3e4\database\Connection;
+use Tsi\Atividade3e4\database\Connection;
 use Exception;
 use PDO;
 
@@ -56,7 +56,9 @@ abstract class Model
                 $this->params .= " :$key,"; //":nome, :descricao, :qtd_estoque..."
                 $this->columns .= " $key,";//"nome, descricao, qtd_estoque..."
                 $this->values[":$key"] = is_bool($value) ? (int)$value : $value;
-                // $this->updated .= $this->delimite($key) . " = :$key,"; //POSTGRE
+                if ($key !== $this->primary) {
+                    $this->updated .= " $key = :$key,";
+                }
             }
             $this->params = substr($this->params, 0, strlen($this->params) - 1);
             $this->columns = substr($this->columns, 0, strlen($this->columns) - 1);

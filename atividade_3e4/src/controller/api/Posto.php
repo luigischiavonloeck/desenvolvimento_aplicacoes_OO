@@ -1,8 +1,8 @@
 <?php
 
-namespace tsi\atividade_3e4\controller\api;
+namespace Tsi\Atividade3e4\controller\api;
 
-use tsi\atividade_3e4\model\Posto as ModelPosto;
+use Tsi\Atividade3e4\model\Posto as ModelPosto;
 use Exception;
 
 class Posto extends Controller
@@ -43,7 +43,7 @@ class Posto extends Controller
 		try {
 			$this->validatePostoRequest();
 
-			$this->model = new Posto(
+			$this->model = new ModelPosto(
 				$_POST['nome'],
         $_POST['cnpj'],
         $_POST['endereco'],
@@ -79,7 +79,7 @@ class Posto extends Controller
 
 			$this->validatePostoRequest();
 
-			$this->model = new Posto(
+			$this->model = new ModelPosto(
 				$_POST['nome'],
         $_POST['cnpj'],
         $_POST['endereco'],

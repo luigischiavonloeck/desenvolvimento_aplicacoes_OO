@@ -1,5 +1,5 @@
 <?php
-namespace tsi\atividade_3e4\controller;
+namespace Tsi\Atividade3e4\controller;
 
 use Dotenv\Dotenv;
 use Exception;

@@ -1,6 +1,6 @@
 <?php
 
-namespace tsi\atividade_3e4\interfaces;
+namespace Tsi\Atividade3e4\interfaces;
 
 interface iDAO
 {

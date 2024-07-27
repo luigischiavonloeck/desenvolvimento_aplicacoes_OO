@@ -1,9 +1,9 @@
 <?php
 
-namespace tsi\atividade_3e4\model;
+namespace Tsi\Atividade3e4\model;
 
 use Exception;
-use tsi\atividade_3e4\interfaces\iDAO;
+use Tsi\Atividade3e4\interfaces\iDAO;
 
 class Posto extends Model implements iDAO
 {
