@@ -35,6 +35,10 @@
                 <td>{{$posto->cidade}}</td>
                 <td>{{$posto->cordX}}</td>
                 <td>{{$posto->cordY}}</td>
+                <td>
+                    <a href="{{route('posto.edit',$posto->id)}}">Editar</a>
+                    <a href="{{route('posto.delete',$posto->id)}}">Remover</a>
+                </td>
             </tr>
             @endforeach
         </tbody>

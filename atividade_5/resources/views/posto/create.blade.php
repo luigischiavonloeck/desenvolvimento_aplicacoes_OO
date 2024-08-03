@@ -10,7 +10,9 @@
 
 <body>
     <h1>Criar um novo Posto</h1>
-    <form action="/postos" method="POST">
+    <form action="/posto" method="POST">
+        @csrf
+        <input type="hidden" name="_token" value="{{csrf_token()}}"/>
         <table>
             <tr>
                 <td>Nome:</td>

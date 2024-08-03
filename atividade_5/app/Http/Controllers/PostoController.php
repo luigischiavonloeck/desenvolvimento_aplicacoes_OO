@@ -18,10 +18,44 @@ class PostoController extends Controller
     }
 
     public function index(){
-        return view('posto.index',['postos'=>$this->posto->all()]);
+        return view('posto.index',['postos'=>Posto::all()]);
     }
 
     public function show($id){
-        return view('posto.show',['posto'=>$this->posto->find($id)]);
+        return view('posto.show',['posto'=>Posto::find($id)]);
+    }
+
+    public function store(Request $request){
+
+        $dados = $request->all();
+
+        if(Posto::create($dados)){
+            return redirect('/postos');
+        }else dd("Erro!!!");
+    }
+
+    public function create(){
+        return view('posto.create');
+    }
+
+    public function update(Request $request, $id){
+
+        $dados = $request->all();
+
+        if(!Posto::find($id)->update($dados))
+            dd("Erro!!!");
+
+        return redirect('/postos');
+    }
+
+    public function edit($id){
+        return view('posto.edit',['posto'=>Posto::find($id)]);
+    }
+
+    public function destroy($id){
+        if(!Posto::destroy($id))
+            dd("Erro!!!");
+
+        return redirect('/postos');
     }
 }

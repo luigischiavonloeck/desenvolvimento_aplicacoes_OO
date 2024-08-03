@@ -11,34 +11,35 @@
 <body>
     <h1>Editar um Posto</h1>
     <form action="{{route('posto.update',$posto->id)}}" method="POST">
+        @csrf
         <table>
             <tr>
                 <td>Nome:</td>
-                <td><input type="text" name="nome" value="{{$produto->nome}}"/></td>
+                <td><input type="text" name="nome" value="{{$posto->nome}}"/></td>
             </tr>
             <tr>
                 <td>CNPJ:</td>
-                <td><input type="text" name="cnpj" value="{{$produto->cnpj}}"/></td>
+                <td><input type="text" name="cnpj" value="{{$posto->cnpj}}"/></td>
             </tr>
             <tr>
                 <td>Endereço:</td>
-                <td><input type="text" name="endereco" value="{{$produto->endereco}}"/></td>
+                <td><input type="text" name="endereco" value="{{$posto->endereco}}"/></td>
             </tr>
             <tr>
                 <td>CEP:</td>
-                <td><input type="text" name="cep" value="{{$produto->cep}}"/></td>
+                <td><input type="text" name="cep" value="{{$posto->cep}}"/></td>
             </tr>
             <tr>
                 <td>Cidade:</td>
-                <td><input type="text" name="cidade" value="{{$produto->cidade}}"/></td>
+                <td><input type="text" name="cidade" value="{{$posto->cidade}}"/></td>
             </tr>
             <tr>
                 <td>Latitude:</td>
-                <td><input type="number" name="cordX" value="{{$produto->cordX}}"/></td>
+                <td><input type="number" name="cordX" value="{{$posto->cordX}}"/></td>
             </tr>
             <tr>
                 <td>Longitude:</td>
-                <td><input type="number" name="cordY" value="{{$produto->cordY}}"/></td>
+                <td><input type="number" name="cordY" value="{{$posto->cordY}}"/></td>
             </tr>
             <tr align="center">
                 <td colspan="2"><input type="submit" value="Salvar"/></td>
