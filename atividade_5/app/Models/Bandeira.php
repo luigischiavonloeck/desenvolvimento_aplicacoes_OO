@@ -8,4 +8,6 @@ use Illuminate\Database\Eloquent\Model;
 class Bandeira extends Model
 {
     use HasFactory;
+
+    protected $fillable = ['nome','imagem'];
 }

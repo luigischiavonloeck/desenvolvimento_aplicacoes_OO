@@ -20,9 +20,15 @@
         <tbody>
             @foreach($bandeiras as $bandeira)
             <tr>
-                <td>{{$bandeira->id}}</td>
+            <td>
+                <a href="/bandeiras/{{$bandeira->id}}">{{$bandeira->id}}</a>
+            </td>
                 <td>{{$bandeira->nome}}</td>
                 <td>{{$bandeira->imagem}}</td>
+                <td>
+                    <a href="{{route('bandeira.edit',$bandeira->id)}}">Editar</a>
+                    <a href="{{route('bandeira.delete',$bandeira->id)}}">Remover</a>
+                </td>
             </tr>
             @endforeach
         </tbody>

@@ -23,12 +23,18 @@
         <tbody>
             @foreach($usuarios as $usuario)
             <tr>
-                <td>{{$usuario->id}}</td>
+            <td>
+                <a href="/usuarios/{{$usuario->id}}">{{$usuario->id}}</a>
+            </td>
                 <td>{{$usuario->nome}}</td>
                 <td>{{$usuario->email}}</td>
                 <td>{{$usuario->cpf}}</td>
                 <td>{{$usuario->cidade}}</td>
                 <td>{{$usuario->cep}}</td>
+                <td>
+                    <a href="{{route('usuario.edit',$usuario->id)}}">Editar</a>
+                    <a href="{{route('usuario.delete',$usuario->id)}}">Remover</a>
+                </td>
             </tr>
             @endforeach
         </tbody>
