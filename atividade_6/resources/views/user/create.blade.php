@@ -10,7 +10,7 @@
 
 <body>
     <h1>Criar um novo usuario</h1>
-    <form action="/usuario" method="POST">
+    <form action="/user" method="POST">
         @csrf
         <input type="hidden" name="_token" value="{{csrf_token()}}"/>
         <table>
@@ -38,7 +38,7 @@
                 <td colspan="2"><input type="submit" value="Criar"/></td>
             </tr>
             <tr align="center">
-                <td colspan="2"><a href="/usuarios" style="display: inline">Voltar</a></td>
+                <td colspan="2"><a href="/user" style="display: inline">Voltar</a></td>
             </tr>
     </form>
 </body>

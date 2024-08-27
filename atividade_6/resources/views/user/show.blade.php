@@ -8,17 +8,17 @@
     <title>Usuario</title>
 </head>
 <body>
-    @if ($usuario)
-        <h1>{{ $usuario->nome }}</h1>
-        <p>{{ $usuario->email }}</p>
+    @if ($user)
+        <h1>{{ $user->nome }}</h1>
+        <p>{{ $user->email }}</p>
         <ul>
-            <li>CPF: {{ $usuario->cpf}}</li>
-            <li>Cidade: {{ $usuario->cidade }}</li>
-            <li>CEP: {{ $usuario->cep }}</li>
+            <li>CPF: {{ $user->cpf}}</li>
+            <li>Cidade: {{ $user->cidade }}</li>
+            <li>CEP: {{ $user->cep }}</li>
         </ul>
     @else
         <p>Usuarios não encontrados! </p>
     @endif
-    <a href="/usuarios">Voltar</a>
+    <a href="/users">Voltar</a>
 </body>
 </html>

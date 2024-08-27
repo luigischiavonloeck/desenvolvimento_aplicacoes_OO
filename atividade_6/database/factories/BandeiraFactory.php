@@ -17,7 +17,8 @@ class BandeiraFactory extends Factory
     public function definition(): array
     {
         return [
-            //
+            "nome" => fake()->company(),
+            "imagem" => fake()->citySuffix()
         ];
     }
 }

@@ -8,7 +8,7 @@
 </head>
 <body>
     <h1>Usuários</h1>
-    @if ($usuarios->count()>0)
+    @if ($users->count()>0)
     <table>
         <thead>
             <tr>
@@ -21,19 +21,19 @@
             </tr>
         </thead>
         <tbody>
-            @foreach($usuarios as $usuario)
+            @foreach($users as $user)
             <tr>
             <td>
-                <a href="/usuarios/{{$usuario->id}}">{{$usuario->id}}</a>
+                <a href="/users/{{$user->id}}">{{$user->id}}</a>
             </td>
-                <td>{{$usuario->nome}}</td>
-                <td>{{$usuario->email}}</td>
-                <td>{{$usuario->cpf}}</td>
-                <td>{{$usuario->cidade}}</td>
-                <td>{{$usuario->cep}}</td>
+                <td>{{$user->nome}}</td>
+                <td>{{$user->email}}</td>
+                <td>{{$user->cpf}}</td>
+                <td>{{$user->cidade}}</td>
+                <td>{{$user->cep}}</td>
                 <td>
-                    <a href="{{route('usuario.edit',$usuario->id)}}">Editar</a>
-                    <a href="{{route('usuario.delete',$usuario->id)}}">Remover</a>
+                    <a href="{{route('user.edit',$user->id)}}">Editar</a>
+                    <a href="{{route('user.delete',$user->id)}}">Remover</a>
                 </td>
             </tr>
             @endforeach
