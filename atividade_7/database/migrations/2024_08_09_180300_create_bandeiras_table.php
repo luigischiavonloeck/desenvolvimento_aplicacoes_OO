@@ -11,16 +11,10 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('postos', function (Blueprint $table) {
+        Schema::create('bandeiras', function (Blueprint $table) {
             $table->id();
             $table->text('nome');
-            $table->text('cnpj');
-            $table->text('endereco');
-            $table->text('cep');
-            $table->text('cidade');
-            $table->decimal('cordX');
-            $table->decimal('cordY');
-            $table->foreignId('bandeira_id')->references('id')->on('bandeiras')->cascadeOnDelete();
+            $table->text('imagem');
             $table->timestamps();
         });
     }
@@ -30,6 +24,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('postos');
+        Schema::dropIfExists('bandeiras');
     }
 };
