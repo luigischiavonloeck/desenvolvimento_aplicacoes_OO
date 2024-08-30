@@ -32,3 +32,5 @@ Route::post('/bandeiras/{id}/edit', [BandeiraController::class,'update'])->name(
 Route::get('/postos/{id}/delete', [PostoController::class,'destroy'])->name('posto.delete');
 Route::get('/users/{id}/delete', [UserController::class,'destroy'])->name('user.delete');
 Route::get('/bandeiras/{id}/delete', [BandeiraController::class,'destroy'])->name('bandeira.delete');
+
+include_once __DIR__."/queries.php";
