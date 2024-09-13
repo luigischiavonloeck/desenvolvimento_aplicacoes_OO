@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers\Api;
 
-use App\Http\Controllers\Controller;
+use App\Http\Controllers\Api\Controller;
 use App\Models\Posto;
 use Illuminate\Http\Request;
 
@@ -11,7 +11,7 @@ class PostoController extends Controller
 
     public function index()
     {
-        response()->json(Posto::all());
+        return response()->json(Posto::all());
     }
 
     /**
