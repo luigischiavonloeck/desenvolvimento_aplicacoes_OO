@@ -3,28 +3,28 @@
 namespace App\Http\Controllers\Api;
 
 use App\Http\Controllers\Controller;
-use App\Models\Bandeira;
+use App\Models\User;
 use Illuminate\Http\Request;
 
-class BandeiraController extends Controller
+class UserController extends Controller
 {
     public function index()
     {
-        return response()->json(Bandeira::all());
+        return response()->json(User::all());
     }
 
     public function store(Request $request)
     {
         try {
-            $newBandeira = $request->all();
-            $storedBandeira = Bandeira::create($newBandeira);
+            $newUser = $request->all();
+            $storedUser = User::create($newUser);
             return response()->json([
-                'msg'=>'Bandeira inserida com sucesso!',
-                'bandeira' => $storedBandeira
+                'msg'=>'Usuário inserido com sucesso!',
+                'user' => $storedUser
             ]);
         } catch (\Exception $error) {
             $responseError = [
-                'Erro' => "Erro ao inserir nova bandeira",
+                'Erro' => "Erro ao inserir novo usuário",
                 'Exception' => $error->getMessage(),
             ];
             $statusHttp = 404;
@@ -35,10 +35,10 @@ class BandeiraController extends Controller
     public function show($id)
     {
         try {
-            return response()->json(Bandeira::findOrFail($id));
+            return response()->json(User::findOrFail($id));
         } catch (\Exception $error) {
             $responseError = [
-                'Erro' => "A bandeira com id:$id não foi encontrada!",
+                'Erro' => "O usuário com id:$id não foi encontrado!",
                 'Exception' => $error->getMessage(),
             ];
             $statusHttp = 404;
@@ -49,15 +49,15 @@ class BandeiraController extends Controller
     public function update(Request $request, $id)
     {
         try {
-            $bandeira = Bandeira::findOrFail($id);
-            $bandeira->update($request->all());
+            $user = User::findOrFail($id);
+            $user->update($request->all());
             return response()->json([
-                'msg'=>'Bandeira atualizada com sucesso!',
-                'bandeira' => $bandeira
+                'msg'=>'Usuário atualizado com sucesso!',
+                'user' => $user
             ]);
         } catch (\Exception $error) {
             $responseError = [
-                'Erro' => "Erro ao atualizar bandeira",
+                'Erro' => "Erro ao atualizar usuário",
                 'Exception' => $error->getMessage(),
             ];
             $statusHttp = 404;
@@ -68,18 +68,19 @@ class BandeiraController extends Controller
     public function remove($id)
     {
         try {
-            $bandeira = Bandeira::findOrFail($id);
-            $bandeira->delete();
+            $user = User::findOrFail($id);
+            $user->delete();
             return response()->json([
-                'msg'=>'Bandeira deletada com sucesso!',
-                'bandeira' => $bandeira
+                'msg'=>'Usuário deletado com sucesso!',
+                'user' => $user
             ]);
         } catch (\Exception $error) {
             $responseError = [
-                'Erro' => "Erro ao deletar bandeira",
-                'Exception' => $error->getMessage()];
+                'Erro' => "Erro ao deletar usuário",
+                'Exception' => $error->getMessage(),
+            ];
             $statusHttp = 404;
             return response()->json($responseError, $statusHttp);
+        }
     }
 }
-    }
