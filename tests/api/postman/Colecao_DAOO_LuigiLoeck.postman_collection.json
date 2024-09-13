@@ -1,0 +1,488 @@
+{
+    "info": {
+        "_postman_id": "ba10ba7f-c97f-4b3d-9c73-2f7882143802",
+        "name": "Colecao_DAOO_LuigiLoeck",
+        "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+        "_exporter_id": "37754325"
+    },
+    "item": [
+        {
+            "name": "Postos",
+            "item": [
+                {
+                    "name": "Show",
+                    "request": {
+                        "method": "GET",
+                        "header": [],
+                        "url": {
+                            "raw": "{{baseUrl}}/posto/:posto_id",
+                            "host": ["{{baseUrl}}"],
+                            "path": ["posto", ":posto_id"],
+                            "variable": [
+                                {
+                                    "key": "posto_id",
+                                    "value": "1"
+                                }
+                            ]
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Index",
+                    "request": {
+                        "method": "GET",
+                        "header": [],
+                        "url": {
+                            "raw": "{{baseUrl}}/posto",
+                            "host": ["{{baseUrl}}"],
+                            "path": ["posto"]
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Store",
+                    "request": {
+                        "method": "POST",
+                        "header": [],
+                        "body": {
+                            "mode": "formdata",
+                            "formdata": [
+                                {
+                                    "key": "nome",
+                                    "value": "Posto teste",
+                                    "type": "text"
+                                },
+                                {
+                                    "key": "cnpj",
+                                    "value": "34534534535345345",
+                                    "type": "text"
+                                },
+                                {
+                                    "key": "endereco",
+                                    "value": "Endereco Falso",
+                                    "type": "text"
+                                },
+                                {
+                                    "key": "cep",
+                                    "value": "96080000",
+                                    "type": "text"
+                                },
+                                {
+                                    "key": "cidade",
+                                    "value": "pelotas",
+                                    "type": "text"
+                                },
+                                {
+                                    "key": "cordX",
+                                    "value": "23.345346",
+                                    "type": "text"
+                                },
+                                {
+                                    "key": "cordY",
+                                    "value": "12.345345",
+                                    "type": "text"
+                                },
+                                {
+                                    "key": "bandeira_id",
+                                    "value": "1",
+                                    "type": "text"
+                                }
+                            ]
+                        },
+                        "url": {
+                            "raw": "{{baseUrl}}/posto",
+                            "host": ["{{baseUrl}}"],
+                            "path": ["posto"]
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Update",
+                    "request": {
+                        "method": "PUT",
+                        "header": [],
+                        "body": {
+                            "mode": "urlencoded",
+                            "urlencoded": [
+                                {
+                                    "key": "nome",
+                                    "value": "Posto teste",
+                                    "type": "text"
+                                },
+                                {
+                                    "key": "cnpj",
+                                    "value": "3425235353",
+                                    "type": "text"
+                                },
+                                {
+                                    "key": "endereco",
+                                    "value": "endereco falso",
+                                    "type": "text"
+                                },
+                                {
+                                    "key": "cep",
+                                    "value": "96080000",
+                                    "type": "text"
+                                },
+                                {
+                                    "key": "cidade",
+                                    "value": "Pelotas",
+                                    "type": "text"
+                                },
+                                {
+                                    "key": "cordX",
+                                    "value": "12.3252352",
+                                    "type": "text"
+                                },
+                                {
+                                    "key": "cordY",
+                                    "value": "32.2345235",
+                                    "type": "text"
+                                },
+                                {
+                                    "key": "bandeira_id",
+                                    "value": "2",
+                                    "type": "text"
+                                }
+                            ]
+                        },
+                        "url": {
+                            "raw": "{{baseUrl}}/posto/:posto_id",
+                            "host": ["{{baseUrl}}"],
+                            "path": ["posto", ":posto_id"],
+                            "variable": [
+                                {
+                                    "key": "posto_id",
+                                    "value": "2"
+                                }
+                            ]
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Remove",
+                    "request": {
+                        "method": "DELETE",
+                        "header": [],
+                        "url": {
+                            "raw": "{{baseUrl}}/posto/:posto_id",
+                            "host": ["{{baseUrl}}"],
+                            "path": ["posto", ":posto_id"],
+                            "variable": [
+                                {
+                                    "key": "posto_id",
+                                    "value": "3"
+                                }
+                            ]
+                        }
+                    },
+                    "response": []
+                }
+            ]
+        },
+        {
+            "name": "Usuarios",
+            "item": [
+                {
+                    "name": "Show",
+                    "request": {
+                        "method": "GET",
+                        "header": [],
+                        "url": {
+                            "raw": "{{baseUrl}}/user/:user_id",
+                            "host": ["{{baseUrl}}"],
+                            "path": ["user", ":user_id"],
+                            "variable": [
+                                {
+                                    "key": "user_id",
+                                    "value": "1"
+                                }
+                            ]
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Index",
+                    "request": {
+                        "method": "GET",
+                        "header": [],
+                        "url": {
+                            "raw": "{{baseUrl}}/user",
+                            "host": ["{{baseUrl}}"],
+                            "path": ["user"]
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Store",
+                    "request": {
+                        "method": "POST",
+                        "header": [],
+                        "body": {
+                            "mode": "formdata",
+                            "formdata": [
+                                {
+                                    "key": "name",
+                                    "value": "User teste",
+                                    "type": "text"
+                                },
+                                {
+                                    "key": "email",
+                                    "value": "emailteste@gmail.com",
+                                    "type": "text"
+                                },
+                                {
+                                    "key": "password",
+                                    "value": "a786daw8t67dt3c",
+                                    "type": "text"
+                                },
+                                {
+                                    "key": "cpf",
+                                    "value": "34634634646",
+                                    "type": "text"
+                                },
+                                {
+                                    "key": "cidade",
+                                    "value": "pelotas",
+                                    "type": "text"
+                                },
+                                {
+                                    "key": "cep",
+                                    "value": "96080000",
+                                    "type": "text"
+                                }
+                            ]
+                        },
+                        "url": {
+                            "raw": "{{baseUrl}}/user",
+                            "host": ["{{baseUrl}}"],
+                            "path": ["user"]
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Update",
+                    "request": {
+                        "method": "PUT",
+                        "header": [],
+                        "body": {
+                            "mode": "urlencoded",
+                            "urlencoded": [
+                                {
+                                    "key": "name",
+                                    "value": "User teste",
+                                    "type": "text"
+                                },
+                                {
+                                    "key": "email",
+                                    "value": "emailteste@gmail.com",
+                                    "type": "text"
+                                },
+                                {
+                                    "key": "password",
+                                    "value": "a765erq87sca78",
+                                    "type": "text"
+                                },
+                                {
+                                    "key": "cpf",
+                                    "value": "37895634875",
+                                    "type": "text"
+                                },
+                                {
+                                    "key": "cidade",
+                                    "value": "Pelotas",
+                                    "type": "text"
+                                },
+                                {
+                                    "key": "cep",
+                                    "value": "96080000",
+                                    "type": "text"
+                                }
+                            ]
+                        },
+                        "url": {
+                            "raw": "{{baseUrl}}/user/:user_id",
+                            "host": ["{{baseUrl}}"],
+                            "path": ["user", ":user_id"],
+                            "variable": [
+                                {
+                                    "key": "user_id",
+                                    "value": "2"
+                                }
+                            ]
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Remove",
+                    "request": {
+                        "method": "DELETE",
+                        "header": [],
+                        "url": {
+                            "raw": "{{baseUrl}}/user/:user_id",
+                            "host": ["{{baseUrl}}"],
+                            "path": ["user", ":user_id"],
+                            "variable": [
+                                {
+                                    "key": "user_id",
+                                    "value": "3"
+                                }
+                            ]
+                        }
+                    },
+                    "response": []
+                }
+            ]
+        },
+        {
+            "name": "Bandeiras",
+            "item": [
+                {
+                    "name": "Show",
+                    "request": {
+                        "method": "GET",
+                        "header": [],
+                        "url": {
+                            "raw": "{{baseUrl}}/bandeira/:bandeira_id",
+                            "host": ["{{baseUrl}}"],
+                            "path": ["bandeira", ":bandeira_id"],
+                            "variable": [
+                                {
+                                    "key": "bandeira_id",
+                                    "value": "1"
+                                }
+                            ]
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Index",
+                    "request": {
+                        "method": "GET",
+                        "header": [],
+                        "url": {
+                            "raw": "{{baseUrl}}/bandeira",
+                            "host": ["{{baseUrl}}"],
+                            "path": ["bandeira"]
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Store",
+                    "request": {
+                        "method": "POST",
+                        "header": [],
+                        "body": {
+                            "mode": "formdata",
+                            "formdata": [
+                                {
+                                    "key": "nome",
+                                    "value": "Bandeira teste",
+                                    "type": "text"
+                                },
+                                {
+                                    "key": "imagem",
+                                    "value": "logobandeira.png",
+                                    "type": "text"
+                                }
+                            ]
+                        },
+                        "url": {
+                            "raw": "{{baseUrl}}/bandeira",
+                            "host": ["{{baseUrl}}"],
+                            "path": ["bandeira"]
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Update",
+                    "request": {
+                        "method": "PUT",
+                        "header": [],
+                        "body": {
+                            "mode": "urlencoded",
+                            "urlencoded": [
+                                {
+                                    "key": "nome",
+                                    "value": "Bandeira teste",
+                                    "type": "text"
+                                },
+                                {
+                                    "key": "imagem",
+                                    "value": "logobandeira.png",
+                                    "type": "text"
+                                }
+                            ]
+                        },
+                        "url": {
+                            "raw": "{{baseUrl}}/bandeira/:bandeira_id",
+                            "host": ["{{baseUrl}}"],
+                            "path": ["bandeira", ":bandeira_id"],
+                            "variable": [
+                                {
+                                    "key": "bandeira_id",
+                                    "value": "2"
+                                }
+                            ]
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Remove",
+                    "request": {
+                        "method": "DELETE",
+                        "header": [],
+                        "url": {
+                            "raw": "{{baseUrl}}/bandeira/:bandeira_id",
+                            "host": ["{{baseUrl}}"],
+                            "path": ["bandeira", ":bandeira_id"],
+                            "variable": [
+                                {
+                                    "key": "bandeira_id",
+                                    "value": "3"
+                                }
+                            ]
+                        }
+                    },
+                    "response": []
+                }
+            ]
+        }
+    ],
+    "event": [
+        {
+            "listen": "prerequest",
+            "script": {
+                "type": "text/javascript",
+                "packages": {},
+                "exec": [""]
+            }
+        },
+        {
+            "listen": "test",
+            "script": {
+                "type": "text/javascript",
+                "packages": {},
+                "exec": [""]
+            }
+        }
+    ],
+    "variable": [
+        {
+            "key": "baseUrl",
+            "value": "https://luigiloeck-daoo-7fe83633b5dd.herokuapp.com"
+        }
+    ]
+}
