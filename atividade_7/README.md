@@ -7,6 +7,14 @@
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
 </p>
 
+## Links do dominio
+
+https://luigiloeck-daoo-7fe83633b5dd.herokuapp.com/postos
+https://luigiloeck-daoo-7fe83633b5dd.herokuapp.com/bandeiras
+https://luigiloeck-daoo-7fe83633b5dd.herokuapp.com/users
+
+Altere o endpoint da url para outros metodos.
+
 ## About Laravel
 
 Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
